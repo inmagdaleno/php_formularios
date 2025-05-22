@@ -1,0 +1,32 @@
+.container{
+    max-width: 900px;
+    background-color: aliceblue;
+    border-radius: 32px;
+    padding: 2rem;
+    box-shadow: 10px 9px 31px -8px rgba(148,146,146,0.77);
+    -webkit-box-shadow: 10px 9px 31px -8px rgba(148,146,146,0.77);
+    -moz-box-shadow: 10px 9px 31px -8px rgba(148,146,146,0.77); 
+    margin: 3rem auto;
+}
+a{
+    text-decoration: none;
+}
+
+form{
+    max-width: 800px;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+h1{
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.botones{
+    display: flex;
+    margin-top: 3rem;
+    gap:2rem;
+}
