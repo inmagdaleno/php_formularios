@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector('form');
     const mensajeError = document.getElementById('mensajeError');
     const mensajeEnviado = document.getElementById('mensajeEnviado');
+    const mostrarP = document.getElementById('mostrarContraseña');
+    const imgOjo = document.getElementById('imgOjo');
 
     // Crear un evento para el submit del formulario
     form.addEventListener('submit', (event) => {
@@ -70,10 +72,6 @@ document.addEventListener("DOMContentLoaded", () => {
             errores.push('Debes aceptar la política de privacidad');
         }
 
-       
-
-
-
         // Si hay errores mostrarlos y parar el envío del formulario
         if(errores.length > 0) {
             // Detiene el submit (parar el envío del formulario)
@@ -84,7 +82,27 @@ document.addEventListener("DOMContentLoaded", () => {
             // Si no hay errores, enviar el formulario
             mensajeError.classList.add('d-none'); // Ocultar el mensaje de error
         }
-})
+
+        // Si no hay errores, mostrar el mensaje de éxito
+        if(errores.length === 0) {
+            mensajeEnviado.classList.remove('d-none'); // Mostrar el mensaje de éxito
+            setTimeout(() => {
+                mensajeEnviado.classList.add('d-none'); // Ocultar el mensaje de éxito después de 3 segundos
+            }, 3000);
+        }
+        
+    })
+    // Mostrar/ocultar la contraseña
+    mostrarP.addEventListener('click', () => {
+        if(document.getElementById('inputPassword').type === 'password') {
+            document.getElementById('inputPassword').type = 'text'
+            imgOjo.src = 'img/ojo-cerrado.svg'
+        }else{
+            document.getElementById('inputPassword').type = 'password'
+            imgOjo.src = 'img/ojo.svg'
+        }
+      
+    })
 
 }) 
 

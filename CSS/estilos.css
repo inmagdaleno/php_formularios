@@ -30,3 +30,20 @@ h1{
     margin-top: 3rem;
     gap:2rem;
 }
+
+.eye{ 
+    display: flex;
+    flex-direction: row;
+}
+
+#mostrarContraseña{
+    margin-left: -2rem;
+    cursor: pointer;
+    background-color: white;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: 0.375rem;
+}
+
+#mostrarContraseña:hover{
+    background-color: #f0f0f0;
+}
